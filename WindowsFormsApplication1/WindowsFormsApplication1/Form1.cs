@@ -61,6 +61,21 @@ namespace WindowsFormsApplication1
             if (labelotobüstürü.Text=="travego")
             {
                 string yolcu = travegoyolcularisim[int.Parse(koltuk.Text) - 1];
+                if (yolcu!="")
+                {
+                    textBox1.Text = yolcu;
+                }
+                string cinsiyet = travegoyolcularcinsiyet[int.Parse(koltuk.Text) - 1];
+                if (cinsiyet=="erkek")
+                {
+                    radioButton1.Checked = true;
+                    koltuk.BackColor = Color.Blue;
+                }
+                else
+                {
+                    radioButton2.Checked = true;
+                    koltuk.BackColor = Color.Pink;
+                }
             }
 
         }
